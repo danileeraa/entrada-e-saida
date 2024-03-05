@@ -1,0 +1,220 @@
+<html>
+<head>
+<title>FINANCEIRO.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bababa;}
+.s3 { color: #6aab73;}
+.s4 { color: #56a8f5;}
+.s5 { color: #2aacb8;}
+.s6 { color: #cf8e6d;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+FINANCEIRO.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;pt-br&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;UTF-8&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">name</span><span class="s3">=&quot;viewport&quot; </span><span class="s2">content</span><span class="s3">=&quot;width=device-width, initial-scale=1.0&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;title&gt;</span><span class="s1">Registro Financeiro</span><span class="s0">&lt;/title&gt;</span>
+    <span class="s0">&lt;style&gt;</span>
+        <span class="s0">body </span><span class="s1">{</span>
+            <span class="s2">font-family</span><span class="s1">: </span><span class="s3">'Segoe UI'</span><span class="s1">, </span><span class="s0">Tahoma</span><span class="s1">, </span><span class="s0">Geneva</span><span class="s1">, </span><span class="s0">Verdana</span><span class="s1">, </span><span class="s3">sans-serif</span><span class="s1">;</span>
+            <span class="s2">background-color</span><span class="s1">: </span><span class="s4">#f5f5f5</span><span class="s1">;</span>
+            <span class="s2">margin</span><span class="s1">: </span><span class="s5">20</span><span class="s3">px</span><span class="s1">;</span>
+        <span class="s1">}</span>
+
+        <span class="s0">h1</span><span class="s1">, </span><span class="s0">h2 </span><span class="s1">{</span>
+            <span class="s2">color</span><span class="s1">: </span><span class="s4">#333</span><span class="s1">;</span>
+        <span class="s1">}</span>
+
+        <span class="s0">input</span><span class="s1">, </span><span class="s0">select </span><span class="s1">{</span>
+            <span class="s2">padding</span><span class="s1">: </span><span class="s5">8</span><span class="s3">px</span><span class="s1">;</span>
+            <span class="s2">margin</span><span class="s1">: </span><span class="s5">5</span><span class="s3">px </span><span class="s5">0</span><span class="s1">;</span>
+            <span class="s2">border</span><span class="s1">: </span><span class="s5">1</span><span class="s3">px solid </span><span class="s4">#ccc</span><span class="s1">;</span>
+            <span class="s2">border-radius</span><span class="s1">: </span><span class="s5">5</span><span class="s3">px</span><span class="s1">;</span>
+            <span class="s2">box-sizing</span><span class="s1">: </span><span class="s3">border-box</span><span class="s1">;</span>
+        <span class="s1">}</span>
+
+        <span class="s0">button </span><span class="s1">{</span>
+            <span class="s2">padding</span><span class="s1">: </span><span class="s5">8</span><span class="s3">px </span><span class="s5">16</span><span class="s3">px</span><span class="s1">;</span>
+            <span class="s2">border</span><span class="s1">: </span><span class="s5">1</span><span class="s3">px solid </span><span class="s4">#ccc</span><span class="s1">;</span>
+            <span class="s2">border-radius</span><span class="s1">: </span><span class="s5">5</span><span class="s3">px</span><span class="s1">;</span>
+            <span class="s2">background-color</span><span class="s1">: </span><span class="s4">#007bff</span><span class="s1">;</span>
+            <span class="s2">color</span><span class="s1">: </span><span class="s4">#fff</span><span class="s1">;</span>
+            <span class="s2">cursor</span><span class="s1">: </span><span class="s3">pointer</span><span class="s1">;</span>
+        <span class="s1">}</span>
+
+        <span class="s0">button</span><span class="s1">:</span><span class="s0">hover </span><span class="s1">{</span>
+            <span class="s2">background-color</span><span class="s1">: </span><span class="s4">#0056b3</span><span class="s1">;</span>
+        <span class="s1">}</span>
+
+        <span class="s0">#historico </span><span class="s1">{</span>
+            <span class="s2">margin-top</span><span class="s1">: </span><span class="s5">10</span><span class="s3">px</span><span class="s1">;</span>
+            <span class="s2">margin-bottom</span><span class="s1">: </span><span class="s5">10</span><span class="s3">px</span><span class="s1">;</span>
+        <span class="s1">}</span>
+
+        <span class="s0">table </span><span class="s1">{</span>
+            <span class="s2">border-collapse</span><span class="s1">: </span><span class="s3">collapse</span><span class="s1">;</span>
+            <span class="s2">width</span><span class="s1">: </span><span class="s5">100</span><span class="s1">%;</span>
+        <span class="s1">}</span>
+
+        <span class="s0">th</span><span class="s1">, </span><span class="s0">td </span><span class="s1">{</span>
+            <span class="s2">border</span><span class="s1">: </span><span class="s5">1</span><span class="s3">px solid </span><span class="s4">#ddd</span><span class="s1">;</span>
+            <span class="s2">padding</span><span class="s1">: </span><span class="s5">12</span><span class="s3">px</span><span class="s1">;</span>
+            <span class="s2">text-align</span><span class="s1">: </span><span class="s3">left</span><span class="s1">;</span>
+        <span class="s1">}</span>
+
+        <span class="s0">th </span><span class="s1">{</span>
+            <span class="s2">background-color</span><span class="s1">: </span><span class="s4">#007bff</span><span class="s1">;</span>
+            <span class="s2">color</span><span class="s1">: </span><span class="s4">#fff</span><span class="s1">;</span>
+        <span class="s1">}</span>
+
+        <span class="s0">#total </span><span class="s1">{</span>
+            <span class="s2">font-size</span><span class="s1">: </span><span class="s5">18</span><span class="s3">px</span><span class="s1">;</span>
+            <span class="s2">font-weight</span><span class="s1">: </span><span class="s3">bold</span><span class="s1">;</span>
+            <span class="s2">margin-top</span><span class="s1">: </span><span class="s5">10</span><span class="s3">px</span><span class="s1">;</span>
+            <span class="s2">color</span><span class="s1">: </span><span class="s4">#333</span><span class="s1">;</span>
+        <span class="s1">}</span>
+
+        <span class="s0">#pesquisa </span><span class="s1">{</span>
+            <span class="s2">margin-top</span><span class="s1">: </span><span class="s5">10</span><span class="s3">px</span><span class="s1">;</span>
+        <span class="s1">}</span>
+    <span class="s0">&lt;/style&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body&gt;</span>
+    <span class="s0">&lt;h1&gt;</span><span class="s1">Registro Financeiro</span><span class="s0">&lt;/h1&gt;</span>
+    <span class="s0">&lt;h2&gt;</span><span class="s1">Adicionar Transação</span><span class="s0">&lt;/h2&gt;</span>
+    <span class="s0">&lt;p&gt;</span>
+        <span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;tipo&quot;</span><span class="s0">&gt;</span><span class="s1">Tipo:</span><span class="s0">&lt;/label&gt;</span>
+        <span class="s0">&lt;select </span><span class="s2">id</span><span class="s3">=&quot;tipo&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;entrada&quot;</span><span class="s0">&gt;</span><span class="s1">Entrada</span><span class="s0">&lt;/option&gt;</span>
+            <span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;saida&quot;</span><span class="s0">&gt;</span><span class="s1">Saída</span><span class="s0">&lt;/option&gt;</span>
+        <span class="s0">&lt;/select&gt;</span>
+    <span class="s0">&lt;/p&gt;</span>
+    <span class="s0">&lt;p&gt;</span>
+        <span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;data&quot;</span><span class="s0">&gt;</span><span class="s1">Data:</span><span class="s0">&lt;/label&gt;</span>
+        <span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;date&quot; </span><span class="s2">id</span><span class="s3">=&quot;data&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;/p&gt;</span>
+    <span class="s0">&lt;p&gt;</span>
+        <span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;descricao&quot;</span><span class="s0">&gt;</span><span class="s1">Descrição:</span><span class="s0">&lt;/label&gt;</span>
+        <span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;text&quot; </span><span class="s2">id</span><span class="s3">=&quot;descricao&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;/p&gt;</span>
+    <span class="s0">&lt;p&gt;</span>
+        <span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;valor&quot;</span><span class="s0">&gt;</span><span class="s1">Valor:</span><span class="s0">&lt;/label&gt;</span>
+        <span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;number&quot; </span><span class="s2">id</span><span class="s3">=&quot;valor&quot; </span><span class="s2">step</span><span class="s3">=&quot;0.01&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;/p&gt;</span>
+    <span class="s0">&lt;p&gt;</span>
+        <span class="s0">&lt;button </span><span class="s2">id</span><span class="s3">=&quot;buttonAdicionar&quot;</span><span class="s0">&gt;</span><span class="s1">Adicionar Transação</span><span class="s0">&lt;/button&gt;</span>
+    <span class="s0">&lt;/p&gt;</span>
+
+    <span class="s0">&lt;h2&gt;</span><span class="s1">Histórico de Transações</span><span class="s0">&lt;/h2&gt;</span>
+    <span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;pesquisa&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;filtro&quot;</span><span class="s0">&gt;</span><span class="s1">Filtrar por Descrição ou Tipo:</span><span class="s0">&lt;/label&gt;</span>
+        <span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;text&quot; </span><span class="s2">id</span><span class="s3">=&quot;filtro&quot; </span><span class="s2">oninput</span><span class="s3">=&quot;</span><span class="s1">filtrarHistorico()</span><span class="s3">&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;/div&gt;</span>
+    <span class="s0">&lt;table&gt;</span>
+        <span class="s0">&lt;thead&gt;</span>
+            <span class="s0">&lt;tr&gt;</span>
+                <span class="s0">&lt;th&gt;</span><span class="s1">Data</span><span class="s0">&lt;/th&gt;</span>
+                <span class="s0">&lt;th&gt;</span><span class="s1">Descrição</span><span class="s0">&lt;/th&gt;</span>
+                <span class="s0">&lt;th&gt;</span><span class="s1">Tipo</span><span class="s0">&lt;/th&gt;</span>
+                <span class="s0">&lt;th&gt;</span><span class="s1">Valor</span><span class="s0">&lt;/th&gt;</span>
+            <span class="s0">&lt;/tr&gt;</span>
+        <span class="s0">&lt;/thead&gt;</span>
+        <span class="s0">&lt;tbody </span><span class="s2">id</span><span class="s3">=&quot;historico&quot;</span><span class="s0">&gt;&lt;/tbody&gt;</span>
+    <span class="s0">&lt;/table&gt;</span>
+
+    <span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;total&quot;</span><span class="s0">&gt;</span><span class="s1">Total: R$ 0.00</span><span class="s0">&lt;/div&gt;</span>
+
+    <span class="s0">&lt;script&gt;</span>
+        <span class="s6">const </span><span class="s1">tipo = document.getElementById(</span><span class="s3">&quot;tipo&quot;</span><span class="s1">);</span>
+        <span class="s6">const </span><span class="s1">data = document.getElementById(</span><span class="s3">&quot;data&quot;</span><span class="s1">);</span>
+        <span class="s6">const </span><span class="s1">descricao = document.getElementById(</span><span class="s3">&quot;descricao&quot;</span><span class="s1">);</span>
+        <span class="s6">const </span><span class="s1">valor = document.getElementById(</span><span class="s3">&quot;valor&quot;</span><span class="s1">);</span>
+        <span class="s6">const </span><span class="s1">buttonAdicionar = document.getElementById(</span><span class="s3">&quot;buttonAdicionar&quot;</span><span class="s1">);</span>
+        <span class="s6">const </span><span class="s1">historico = document.getElementById(</span><span class="s3">&quot;historico&quot;</span><span class="s1">);</span>
+        <span class="s6">const </span><span class="s1">totalElement = document.getElementById(</span><span class="s3">&quot;total&quot;</span><span class="s1">);</span>
+        <span class="s6">const </span><span class="s1">filtro = document.getElementById(</span><span class="s3">&quot;filtro&quot;</span><span class="s1">);</span>
+        <span class="s6">let </span><span class="s1">totalEntradas = </span><span class="s5">0.0</span><span class="s1">;</span>
+        <span class="s6">let </span><span class="s1">totalSaidas = </span><span class="s5">0.0</span><span class="s1">;</span>
+
+        <span class="s1">buttonAdicionar.addEventListener(</span><span class="s3">&quot;click&quot;</span><span class="s1">, () =&gt; {</span>
+            <span class="s6">const </span><span class="s1">tipoSelecionado = tipo.value;</span>
+            <span class="s6">const </span><span class="s1">dataTransacao = formatarData(data.value);</span>
+            <span class="s6">const </span><span class="s1">descricaoTransacao = descricao.value;</span>
+            <span class="s6">const </span><span class="s1">valorTransacao = parseFloat(valor.value);</span>
+
+            <span class="s6">if </span><span class="s1">(isNaN(valorTransacao)) {</span>
+                <span class="s1">alert(</span><span class="s3">&quot;Por favor, insira um valor válido.&quot;</span><span class="s1">);</span>
+                <span class="s6">return</span><span class="s1">;</span>
+            <span class="s1">}</span>
+
+            <span class="s6">const </span><span class="s1">row = </span><span class="s3">`&lt;tr&gt; 
+                            &lt;td&gt;</span><span class="s1">${dataTransacao}</span><span class="s3">&lt;/td&gt; 
+                            &lt;td&gt;</span><span class="s1">${descricaoTransacao}</span><span class="s3">&lt;/td&gt; 
+                            &lt;td&gt;</span><span class="s1">${tipoSelecionado}</span><span class="s3">&lt;/td&gt; 
+                            &lt;td&gt;R$ </span><span class="s1">${valorTransacao.toFixed(</span><span class="s5">2</span><span class="s1">)}</span><span class="s3">&lt;/td&gt; 
+                        &lt;/tr&gt;`</span><span class="s1">;</span>
+
+            <span class="s1">historico.innerHTML += row;</span>
+
+            <span class="s6">if </span><span class="s1">(tipoSelecionado === </span><span class="s3">&quot;entrada&quot;</span><span class="s1">) {</span>
+                <span class="s1">totalEntradas += valorTransacao;</span>
+            <span class="s1">} </span><span class="s6">else if </span><span class="s1">(tipoSelecionado === </span><span class="s3">&quot;saida&quot;</span><span class="s1">) {</span>
+                <span class="s1">totalSaidas += valorTransacao;</span>
+            <span class="s1">}</span>
+
+            <span class="s1">atualizarTotal();</span>
+            <span class="s1">limparCampos();</span>
+        <span class="s1">});</span>
+
+        <span class="s6">function </span><span class="s1">filtrarHistorico() {</span>
+            <span class="s6">const </span><span class="s1">termoFiltro = filtro.value.toLowerCase();</span>
+            <span class="s6">const </span><span class="s1">linhas = historico.getElementsByTagName(</span><span class="s3">&quot;tr&quot;</span><span class="s1">);</span>
+
+            <span class="s6">for </span><span class="s1">(</span><span class="s6">let </span><span class="s1">i = </span><span class="s5">0</span><span class="s1">; i &lt; linhas.length; i++) {</span>
+                <span class="s6">const </span><span class="s1">descricaoTransacao = linhas[i].getElementsByTagName(</span><span class="s3">&quot;td&quot;</span><span class="s1">)[</span><span class="s5">1</span><span class="s1">];</span>
+                <span class="s6">const </span><span class="s1">tipoTransacao = linhas[i].getElementsByTagName(</span><span class="s3">&quot;td&quot;</span><span class="s1">)[</span><span class="s5">2</span><span class="s1">];</span>
+
+                <span class="s6">if </span><span class="s1">(descricaoTransacao &amp;&amp; tipoTransacao) {</span>
+                    <span class="s6">const </span><span class="s1">textoDescricao = descricaoTransacao.textContent.toLowerCase();</span>
+                    <span class="s6">const </span><span class="s1">textoTipo = tipoTransacao.textContent.toLowerCase();</span>
+
+                    <span class="s6">if </span><span class="s1">(textoDescricao.includes(termoFiltro) || textoTipo.includes(termoFiltro)) {</span>
+                        <span class="s1">linhas[i].style.display = </span><span class="s3">&quot;&quot;</span><span class="s1">;</span>
+                    <span class="s1">} </span><span class="s6">else </span><span class="s1">{</span>
+                        <span class="s1">linhas[i].style.display = </span><span class="s3">&quot;none&quot;</span><span class="s1">;</span>
+                    <span class="s1">}</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+
+        <span class="s6">function </span><span class="s1">formatarData(dataIso) {</span>
+            <span class="s6">const </span><span class="s1">[ano, mes, dia] = dataIso.split(</span><span class="s3">&quot;-&quot;</span><span class="s1">);</span>
+            <span class="s6">return </span><span class="s3">`</span><span class="s1">${dia}</span><span class="s3">/</span><span class="s1">${mes}</span><span class="s3">/</span><span class="s1">${ano.substr(</span><span class="s5">2</span><span class="s1">)}</span><span class="s3">`</span><span class="s1">;</span>
+        <span class="s1">}</span>
+
+        <span class="s6">function </span><span class="s1">atualizarTotal() {</span>
+            <span class="s6">const </span><span class="s1">totalGeral = totalEntradas - totalSaidas;</span>
+            <span class="s1">totalElement.textContent = </span><span class="s3">`Total: R$ </span><span class="s1">${totalGeral.toFixed(</span><span class="s5">2</span><span class="s1">)}</span><span class="s3">`</span><span class="s1">;</span>
+        <span class="s1">}</span>
+
+        <span class="s6">function </span><span class="s1">limparCampos() {</span>
+            <span class="s1">data.value = </span><span class="s3">&quot;&quot;</span><span class="s1">;</span>
+            <span class="s1">descricao.value = </span><span class="s3">&quot;&quot;</span><span class="s1">;</span>
+            <span class="s1">valor.value = </span><span class="s3">&quot;&quot;</span><span class="s1">;</span>
+        <span class="s1">}</span>
+    <span class="s0">&lt;/script&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span>
+</pre>
+</body>
+</html>
